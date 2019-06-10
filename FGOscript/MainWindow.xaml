@@ -1,0 +1,32 @@
+﻿<Window x:Class="FGOscript.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FGOscript"
+        mc:Ignorable="d"
+        Topmost="True"
+        Title="MainWindow" Height="480" Width="720" Closing="Window_Closing">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="377*"/>
+            <ColumnDefinition Width="47*"/>
+        </Grid.ColumnDefinitions>
+        <ListBox Loaded="RunningListBox_Loaded"  Name="RunningListBox">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <local:mystrack></local:mystrack>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <StackPanel Grid.Column="2">
+            <Button Name="SelectWindowsButton" Click="SelectWindowsButton_Click">SelectWindows</Button>
+            <Button Name="AddToLastButton" Click="AddToLastButton_Click">AddToLast</Button>
+            <Button Name="RemoveSelectButton" Click="RemoveSelectButton_Click">RemoveSelectItem</Button>
+            <Button Name="StartButton" Click="StartButton_Click">Start</Button>
+            <Button Name="StopButton" Click="StopButton_Click">Stop</Button>
+            <Button Name="SaveButton" Click="SaveButton_Click">Save</Button>
+        </StackPanel>
+        
+    </Grid>
+</Window>

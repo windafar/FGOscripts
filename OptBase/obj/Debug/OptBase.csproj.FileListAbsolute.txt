@@ -1,0 +1,6 @@
+C:\Users\yjdcb\Source\Repos\FGOscript\optBase\bin\Debug\OptBase.dll
+C:\Users\yjdcb\Source\Repos\FGOscript\optBase\bin\Debug\OptBase.pdb
+C:\Users\yjdcb\Source\Repos\FGOscript\optBase\obj\Debug\OptBase.csprojAssemblyReference.cache
+C:\Users\yjdcb\Source\Repos\FGOscript\optBase\obj\Debug\OptBase.csproj.CoreCompileInputs.cache
+C:\Users\yjdcb\Source\Repos\FGOscript\optBase\obj\Debug\OptBase.dll
+C:\Users\yjdcb\Source\Repos\FGOscript\optBase\obj\Debug\OptBase.pdb

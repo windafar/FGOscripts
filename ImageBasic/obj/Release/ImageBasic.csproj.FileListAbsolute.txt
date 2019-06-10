@@ -1,0 +1,6 @@
+C:\Users\yjdcb\Source\Repos\PlayProject2\ImageBasic\bin\Release\ImageBasic.dll
+C:\Users\yjdcb\Source\Repos\PlayProject2\ImageBasic\bin\Release\ImageBasic.pdb
+C:\Users\yjdcb\Source\Repos\PlayProject2\ImageBasic\obj\Release\ImageBasic.csprojAssemblyReference.cache
+C:\Users\yjdcb\Source\Repos\PlayProject2\ImageBasic\obj\Release\ImageBasic.csproj.CoreCompileInputs.cache
+C:\Users\yjdcb\Source\Repos\PlayProject2\ImageBasic\obj\Release\ImageBasic.dll
+C:\Users\yjdcb\Source\Repos\PlayProject2\ImageBasic\obj\Release\ImageBasic.pdb
