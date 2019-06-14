@@ -134,7 +134,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\PlayProject2\ImageBasic\ImageBasic.csproj">
+    <ProjectReference Include="..\ImageBasic\ImageBasic.csproj">
       <Project>{2d95120a-b885-4cde-8b6f-7aae702d7f61}</Project>
       <Name>ImageBasic</Name>
     </ProjectReference>

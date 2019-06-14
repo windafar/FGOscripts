@@ -18,8 +18,12 @@ namespace OptBase
         public static BitmapImage BitmapToBitmapImage(System.Drawing.Bitmap bitmap)
         {
             MemoryStream ms = new MemoryStream();
-            bitmap.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
-            ms.Seek(0, SeekOrigin.Begin);
+            try
+            {
+                bitmap.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+            }
+            catch  { return null; }
+                ms.Seek(0, SeekOrigin.Begin);
             BitmapImage bitmapImage = new BitmapImage();
             bitmapImage.BeginInit();
             bitmapImage.StreamSource = ms;

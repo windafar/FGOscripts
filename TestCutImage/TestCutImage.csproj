@@ -96,10 +96,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\PlayProject2\ImageBasic\ImageBasic.csproj">
-      <Project>{2d95120a-b885-4cde-8b6f-7aae702d7f61}</Project>
-      <Name>ImageBasic</Name>
-    </ProjectReference>
     <ProjectReference Include="..\optBase\OptBase.csproj">
       <Project>{999bdd47-c29b-4544-8078-2440b28161bc}</Project>
       <Name>OptBase</Name>

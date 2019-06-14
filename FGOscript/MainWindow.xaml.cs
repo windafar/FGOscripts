@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -72,10 +73,10 @@ namespace FGOscript
         {
             list.Add(new DataElem()
             {
-                MonitorImage = new System.Drawing.Bitmap(@"C:\Users\yjdcb\Source\Repos\FGOscript\FGOscript\bin\Debug\add.jpg"),
+                MonitorImage = new System.Drawing.Bitmap("add.jpg"),
                 MonitorCheck = "监视图",
                 MonitorPosition = new System.Drawing.Rectangle(),
-                SynCheckImage = new System.Drawing.Bitmap(@"C:\Users\yjdcb\Source\Repos\FGOscript\FGOscript\bin\Debug\add.jpg"),
+                SynCheckImage = new System.Drawing.Bitmap("add.jpg"),
                 SynCheck = "同步区域说明",
                 SynCheckPosition = new System.Drawing.Rectangle(),
             }
@@ -97,12 +98,12 @@ namespace FGOscript
                     if (!RealTimeSynCheckPositionContrast(list[CurIterationIndex]))
                     {//没有通过同步检查
                         list[CurIterationIndex].SynCheckIsOk = false;
-                        CurIterationIndex--;
+                        CurIterationIndex++;
                         continue;
                     }
                     list[CurIterationIndex].SynCheckIsOk = true;
 
-                    if (RealTimeMonitorPositionContrast(list[CurIterationIndex],24))
+                    if (RealTimeMonitorPositionContrast(list[CurIterationIndex],16))
                     {//监视到期望区域
                         list[CurIterationIndex].MonitorCheckIsOk = true;
                         //MonitorCheck的格式如下：
@@ -131,14 +132,12 @@ namespace FGOscript
                                 OptBase.OptBaseX.SetMouseClick(list[CurIterationIndex].MonitorPosition);
                                 break;
                         }
-                        CurIterationIndex++;
                     }
                     else
                     {
                         list[CurIterationIndex].MonitorCheckIsOk = false;
-                        CurIterationIndex--;
                     }
-
+                    CurIterationIndex++;
                     Thread.Sleep(250);
                 }
             });
@@ -219,6 +218,12 @@ namespace FGOscript
             return csd < excsd;
         }
 
-
+        private void RunningListBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Delete)
+            {
+                list.RemoveAt(RunningListBox.SelectedIndex);
+            }
+        }
     }
 }

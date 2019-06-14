@@ -12,7 +12,7 @@
             <ColumnDefinition Width="377*"/>
             <ColumnDefinition Width="47*"/>
         </Grid.ColumnDefinitions>
-        <ListBox Loaded="RunningListBox_Loaded"  Name="RunningListBox">
+        <ListBox Keyboard.KeyDown="RunningListBox_KeyDown" Loaded="RunningListBox_Loaded"  Name="RunningListBox">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <local:mystrack></local:mystrack>

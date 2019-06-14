@@ -27,8 +27,7 @@
         <Image Loaded="PreviewImage_Loaded" Name="PreviewImage" Grid.Row="1"></Image>
         <StackPanel Orientation="Horizontal" Grid.Row="2">
             <Button Name="SelectButton" Click="SelectButton_Click">重置</Button>
-            <Button>确定</Button>
-            <Button Name="CloseWindowsButton" Click="CloseWindowsButton_Click">取消</Button>
+            <Button Name="CloseWindowsButton" Click="CloseWindowsButton_Click">关闭</Button>
         </StackPanel>
     </Grid>
 </Window>
